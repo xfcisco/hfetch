@@ -1,0 +1,17 @@
+#! /usr/bin/ruby
+require 'json'
+require './workout.rb'
+require './meal.rb'
+require './fetch.rb'
+
+
+case ARGV[0]
+  when '+workout'
+    handle_workout JSON.parse(ARGV[1]);
+  when '+meal'
+    handle_meal JSON.parse(ARGV[1]);
+  else
+    fetch
+end
+
+
