@@ -15,9 +15,14 @@ $ hfetch +workout '{
   "inclined.bench.press": { "reps": 5, "weight": 18 },
   ...
 }'
+```
 
+```
 $ hfetch +meal '{ "carbs": 200, "protein": 50 }'
+```
 
+
+```
 $ hfetch
 ⠀⠀⠀⠀  (\__/)⠀⠀⠀⠀⠀     ||||||||||||| info |||||||||||
 ⠀⠀⠀⠀  (•ㅅ•)          |||||||||||||||||||||||||||||||||
