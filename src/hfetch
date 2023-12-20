@@ -7,9 +7,9 @@ require './fetch.rb'
 
 case ARGV[0]
   when '+workout'
-    handle_workout JSON.parse(ARGV[1]);
+    handle_workout ARGV[1];
   when '+meal'
-    handle_meal JSON.parse(ARGV[1]);
+    handle_meal ARGV[1];
   else
     fetch
 end

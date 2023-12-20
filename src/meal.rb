@@ -1,4 +1,5 @@
+require 'json'
 
-def handle_meal(meal)
+def handle_meal(s_meal)
 end
 
