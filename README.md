@@ -3,7 +3,7 @@ fetch tool in the day, health tracker in the night.
 
 ### Current outline for how It'll be used:
 ```
-# logs workout and meal data in local database (in a hidden file probably) with their 
+# logs workout and meal data in local database (in a hidden file for now) with their 
 # times and dates for doing data analysis later in the fetch.
 # all exercises have the same options but may be processed differently,
 # also options left out are defaulted.
