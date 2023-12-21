@@ -6,8 +6,12 @@ require './analyze.rb'
 require './fetch.rb'
 
 
-if !File.exists?("/home/#{ENV['USER']}/.config/hfetch.json") then
-  File.write("/home/#{ENV['USER']}/.config/hfetch.json", '{}');
+if !File.exists?("/home/#{ENV['USER']}/.config/hfetch.workouts.json") then
+  File.write("/home/#{ENV['USER']}/.config/hfetch.workouts.json", '{}');
+end
+
+if !File.exists?("/home/#{ENV['USER']}/.config/hfetch.meals.json") then
+  File.write("/home/#{ENV['USER']}/.config/hfetch.meals.json", '{}');
 end
 
 case ARGV[0]
