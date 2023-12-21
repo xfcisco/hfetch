@@ -2,16 +2,23 @@
 require 'json'
 require './workout.rb'
 require './meal.rb'
+require './analyze.rb'
 require './fetch.rb'
 
+
+if !File.exists?("/home/#{ENV['USER']}/.config/hfetch.json") then
+  File.write("/home/#{ENV['USER']}/.config/hfetch.json", '{}');
+end
 
 case ARGV[0]
   when '+workout'
     handle_workout ARGV[1];
   when '+meal'
     handle_meal ARGV[1];
+  when '+analyze'
+    analyze;
   else
-    fetch
+    fetch;
 end
 
 
