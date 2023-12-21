@@ -10,10 +10,12 @@ fetch tool in the day, health tracker in the night.
 
 $ hfetch +workout '{
   "interworkout.rest": 10,
-  "push.up": { "reps": 18, "sets": 4, "rest": 3 },
-  "pull.up": { "reps": 14, "sets": 3, "added.weight": 2, "rest": 4 },
-  "inclined.bench.press": { "reps": 5, "weight": 18 },
-  ...
+  "exercises": {
+    "push.up": { "reps": 18, "sets": 4, "rest": 3 },
+    "pull.up": { "reps": 14, "sets": 3, "weight": 2, "rest": 4 },
+    "inclined.bench.press": { "reps": 5, "weight": 18, "rest": 2 },
+    ...
+  }
 }'
 ```
 
@@ -24,8 +26,8 @@ $ hfetch +meal '{ "carbs": 200, "protein": 50 }'
 
 ```
 $ hfetch
-⠀⠀⠀⠀  (\__/)⠀⠀⠀⠀⠀     ||||||||||||| info |||||||||||
-⠀⠀⠀⠀  (•ㅅ•)          |||||||||||||||||||||||||||||||||
+⠀⠀⠀⠀(\__/)⠀⠀⠀⠀⠀     ||||||||||||| info |||||||||||
+⠀⠀⠀⠀(•ㅅ•)          |||||||||||||||||||||||||||||||||
  ⠀＿ ノヽ⠀ノ＼＿⠀     ||||||||||||||||||||||||||||||||||
 /⠀️⠀Y⠀⌒Ｙ⌒⠀Ｙ⠀️   ヽ    ||||||||||||||||||||||||||||||||
 (⠀️⠀️⠀️(三ヽ人⠀⠀/⠀ ⠀ |   ||||||||||||||||||||||||||||||||||
