@@ -14,7 +14,31 @@ if !File.exists?("/home/#{ENV['USER']}/.config/hfetch.meals.json") then
   File.write("/home/#{ENV['USER']}/.config/hfetch.meals.json", '{}');
 end
 
+help_banner = %s{
+Commands:
+  +workout         Add a workout to the local workout record.
+  +meal            Add a meal to the local meal record.
+  +analyze         Analyze the data in the workout and meal records,
+                   and locally generate health analytics for fetching.
+
+
+Examples:
+  $ hfetch +workout '{
+    "interworkout.rest": 10,
+    "exercises": {
+      "push.up": { "reps": 18, "sets": 4, "rest": 3 },
+      "pull.up": { "reps": 14, "sets": 3, "weight": 2, "rest": 4 },
+      "inclined.bench.press": { "reps": 5, "weight": 18, "rest": 2 },
+      ...
+    }
+  }'
+
+  $ hfetch +meal '{ "carbs": 200, "protein": 50 }'
+}
+
 case ARGV[0]
+  when '-h', '--help'
+    puts help_banner
   when '+workout'
     handle_workout ARGV[1];
   when '+meal'
